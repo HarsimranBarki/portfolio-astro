@@ -1,11 +1,35 @@
 <nav class="py-2 flex gap-20 justify-center z-10 fixed w-full">
-  <button class="py-5 hover:underline transition-all">Home</button><button
-    class="py-5 hover:underline transition-all">Work</button
-  ><button class="py-5 hover:underline transition-all">Contact</button>
+  <a href="#home-section"><button class="py-5 transition-all">Home</button></a>
+  <a href="#project-section"
+    ><button class="py-5 transition-all">Work</button>
+  </a>
+  <a href="#contact-section"
+    ><button class="py-5 transition-all">Contact</button>
+  </a>
 </nav>
 
 <style>
   nav {
     background-color: #f9f7f1;
+  }
+  a:hover {
+    opacity: 1;
+  }
+  a {
+    position: relative;
+    opacity: 0.75;
+    display: inline-block;
+  }
+  a:hover::before {
+    width: 100%;
+  }
+  a::before {
+    width: 0%;
+    bottom: 10px;
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #031d44;
   }
 </style>
