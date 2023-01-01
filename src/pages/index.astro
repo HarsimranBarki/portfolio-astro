@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Timeline from "../components/Timeline.astro";
+import Projects from "../components/Projects.astro";
+import Stack from "../components/Stack.astro";
+---
+
+<Layout title="Harsimran">
+  <Navbar />
+  <div class="relative h-screen w-100">
+    <main class="h-3/4 flex items-center justify-center flex-col hero-main">
+      <img
+        src="/public/profile.png"
+        class="w-52 object-cover h-52 object-top mb-6 rounded-full bg-green-100"
+        alt="Hero Image"
+      />
+      <div class="mb-2">
+        <p class="text-center hero-intro font-bold text-xl">Hi, my name is</p>
+        <h1 class="text-7xl font-bold">Harsimran Singh</h1>
+      </div>
+
+      <p class="mt-6 text-xl max-w-7xl text-center">
+        I am a full stack developer with expertise in both front-end and
+        back-end web development, particularly in technologies such as <u
+          class="text-green-800"
+          class="font-semibold"
+        >
+          NextJS, React, and Firebase</u
+        >. My skills also include HTML, CSS, and JavaScript. View my portfolio
+        to see my recent work and capabilities as a full stack developer.
+      </p>
+      <button class="shadow-md py-3 px-4 w-52 rounded-md mt-12 text-xl"
+        >Contact Me</button
+      >
+    </main>
+    <Timeline />
+    <Projects />
+    <Stack />
+  </div>
+</Layout>
+
+<style>
+  .hero-intro {
+    color: #00a688;
+  }
+  main {
+    background-color: #f9f7f1;
+  }
+
+  button {
+    background: #1fe7c3;
+  }
+
+  .inter {
+    font-family: "Inter";
+  }
+</style>
