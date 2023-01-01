@@ -6,6 +6,7 @@ import Projects from "../components/Projects.astro";
 import Stack from "../components/Stack.astro";
 import Footer from "../components/Footer.astro";
 import { Image, Picture } from "@astrojs/image/components";
+import Blog from "../components/Blog.astro";
 ---
 
 <Layout title="Harsimran">
@@ -20,12 +21,13 @@ import { Image, Picture } from "@astrojs/image/components";
         alt="Hero Image"
         width="100%"
         height="100%"
-        format="png"
       />
       <div class="mb-2">
-        <p class="text-center hero-intro font-bold text-xl">Hi, my name is</p>
+        <p class="text-center hero-intro font-bold text-xl title">
+          Hi, my name is
+        </p>
         <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold">
-          Harsimran Singh
+          Harsimran Singh Barki
         </h1>
       </div>
 
@@ -49,6 +51,7 @@ import { Image, Picture } from "@astrojs/image/components";
     <Timeline />
     <Projects />
     <Stack />
+    <Blog />
     <Footer />
   </div>
 </Layout>
@@ -64,87 +67,16 @@ import { Image, Picture } from "@astrojs/image/components";
     background-color: #f9f7f1;
   }
 
+  .title {
+    color: #034f4d;
+  }
+
+  h1 {
+    color: #034f4d;
+  }
   button {
     background: #1fe7c3;
     position: relative;
-  }
-
-  button {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-  }
-
-  button:before {
-    content: "";
-    background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-  }
-
-  button:active {
-    color: #fff;
-  }
-
-  button:active:after {
-    /* background: transparent; */
-    color: white;
-  }
-
-  button:hover:before {
-    opacity: 1;
-  }
-
-  button:after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-  }
-
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
   }
 
   .inter {

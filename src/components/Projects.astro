@@ -46,7 +46,7 @@ const projects = [
       {
         projects.map((project) => {
           return (
-            <div class="w-full">
+            <div class="w-full ">
               <p class="text-md font-semibold mb-2 flex items-center gap-2">
                 <span
                   class={`h-2 w-2 inline-block rounded-full bg-green-300`}
@@ -54,10 +54,10 @@ const projects = [
                 {project.title}
               </p>
 
-              <div class="bg-white shadow-md p-6 rounded-md h-52 flex flex-col gap-5 justify-around">
+              <div class="bg-white shadow-md p-6 rounded-md h-52 flex flex-col gap-5 justify-around text-black">
                 <div class="w-full flex justify-center items-start gap-5">
                   <img
-                    src={ project.image}
+                    src={project.image}
                     alt=""
                     class="w-24 p-2 rounded-md"
                     width="100%"
@@ -67,7 +67,7 @@ const projects = [
                 </div>
                 <a href={project.url} target="_blank" rel="noopener">
                   <button
-                    class={`bg-black text-white px-5 py-2 rounded-md  hover:shadow-xl transition-shadow `}
+                    class={`bg-black text-white px-5 py-2 rounded-md   hover:bg-gray-800 transition-colors `}
                   >
                     View Website
                   </button>
@@ -83,11 +83,7 @@ const projects = [
 
 <style>
   section {
-    background: rgb(238, 174, 202);
-    background: radial-gradient(
-      circle,
-      rgba(238, 174, 202, 1) 0%,
-      rgba(148, 187, 233, 1) 100%
-    );
+    background: #034f4d;
+    color: #fff;
   }
 </style>
